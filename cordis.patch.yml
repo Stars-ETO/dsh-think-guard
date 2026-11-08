@@ -1,0 +1,30 @@
+- insert:
+    - id: dsh-think-guard
+      name: dsh-think-guard
+      config:
+        enabled: false
+        mode: observe
+        judge:
+          provider: ''
+          model: ''
+          reasoningEffort: ''
+          maxTokens: 3000
+          maxToolCalls: 4
+          timeoutMs: 45000
+        triggers:
+          heuristics: true
+          turnBoundary: true
+          everySteps: 0
+          cooldownMs: 45000
+          maxReviewsPerTurn: 3
+          boundaryTimeoutMs: 12000
+        intervention:
+          severityThreshold: 3
+          maxInterventionsPerTurn: 1
+          maxChars: 320
+          atTurnBoundary: false
+        scope:
+          toolResults: false
+          reasoningChars: 900
+          maxAgeEvents: 400
+          allowFileReads: true
