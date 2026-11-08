@@ -17,6 +17,12 @@ An independent supervision plugin for DeepSeek Harness (DSH). It uses a separate
 
 ## Installation
 
+Install from GitHub source (replace `desktop` with the profile you use; this path has not yet been verified in a clean DSH environment):
+
+```sh
+dsh plugin --profile desktop add github:Stars-ETO/dsh-think-guard
+```
+
 This is a DSH plugin, not a standalone application. Install it from a plugin directory or release archive through a DSH version that supports plugins, configure a model provider, then reload the plugin or restart DSH. Open the supervisor from the conversation header. Installation UI varies by DSH version.
 
 Keep the package structure intact, including `package.json`, `cordis.patch.yml`, `lib/`, and `vendor/`. For a local link, a DSH desktop profile can use `pnpm add "link:<absolute-plugin-directory>"` and add `dsh-think-guard` to its bundle configuration; check your DSH documentation.

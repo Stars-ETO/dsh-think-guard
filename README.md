@@ -17,6 +17,12 @@ DeepSeek Harness（DSH）的独立监察插件，使用单独配置的模型检�
 
 ## 安装
 
+从 GitHub 源码安装（将 `desktop` 换成实际使用的 profile；此安装方式尚待在干净 DSH 环境中验证）：
+
+```sh
+dsh plugin --profile desktop add github:Stars-ETO/dsh-think-guard
+```
+
 本项目是 DSH 插件，不是独立程序。准备好支持插件的 DSH 和模型服务，在 DSH 插件界面添加此插件目录或从发行包安装；不同 DSH 版本的安装方式可能不同。安装后按提示重新加载插件或重启，在会话标题栏打开“思考监督”。
 
 源码包包含 `package.json`、`cordis.patch.yml`、`lib/` 与 `vendor/`，需保持目录结构。通过本地目录链接安装时，可在 DSH desktop profile 中使用 `pnpm add "link:<插件目录绝对路径>"`，并将 `dsh-think-guard` 加入 profile 的 bundle 配置；具体配置以对应 DSH 版本为准。
