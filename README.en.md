@@ -17,6 +17,12 @@ An independent supervision plugin for DeepSeek Harness (DSH). It uses a separate
 
 ## Installation
 
+Install from npm (replace `desktop` with your DSH profile):
+
+```sh
+dsh plugin --profile desktop add dsh-think-guard
+```
+
 Install from GitHub source (replace `desktop` with the profile you use; this path has not yet been verified in a clean DSH environment):
 
 ```sh

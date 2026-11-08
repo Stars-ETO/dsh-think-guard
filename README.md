@@ -17,6 +17,12 @@ DeepSeek Harness（DSH）的独立监察插件，使用单独配置的模型检�
 
 ## 安装
 
+从 npm 安装（按实际使用的 DSH profile 调整 `desktop`）：
+
+```sh
+dsh plugin --profile desktop add dsh-think-guard
+```
+
 从 GitHub 源码安装（将 `desktop` 换成实际使用的 profile；此安装方式尚待在干净 DSH 环境中验证）：
 
 ```sh
