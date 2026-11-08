@@ -11,7 +11,7 @@ An independent supervision plugin for DeepSeek Harness (DSH). It uses a separate
 - **Observe or advise:** observe mode records findings; advice mode can queue evidence-based suggestions. Delivery does not mean a suggestion was adopted.
 - **Approvals:** delegate to the system, ask the user, use automatic approval, or use autonomous review. Standard and high-frequency settings select operations for review. Only matching calls intercepted by DSH hooks are covered; this is not a sandbox or a complete safety guarantee.
 - **Final-output review:** inspect a turn's final answer, including explanations, plans, and deliverables. Optional iteration has a configured limit.
-- **Supervisor chat:** discuss the task separately and select or paste images. Ordinary chat is not automatically written into the main session. Explicit forwarding requests are handled and reported by the plugin.
+- **Supervisor chat:** discuss the task separately and select or paste images. Sent images appear in chat history and are sent again when you ask follow-up questions about them, which may incur additional model cost. Ordinary chat is not automatically written into the main session. Explicit forwarding requests are handled and reported by the plugin.
 - **Read-only inspection:** inspect supported text, PDF, DOCX, PPTX, XLSX, and image files within the workspace. Paths or links resolving outside it are rejected. Images require a compatible model and provider.
 - **Standard and detailed inspection:** detailed mode increases budgets and analyzes longer document text in segments, resulting in additional calls and cost. This setting is separate from approval frequency.
 
@@ -51,7 +51,7 @@ Autonomous review may handle a one-time sandbox elevation request only when it c
 
 ## Privacy
 
-Selected providers may receive parts of the main conversation, requested file text, images and tool call information. DSH may store image attachment copies. Supervisor chat and instructions are stored per session under `DSH_HOME/think-guard/memory` (default `~/.dsh/think-guard/memory`) and may contain sensitive data. Do not include that directory in a repository or release. Clearing displayed records does not undo actions already performed.
+Selected providers may receive parts of the main conversation, requested file text, images and tool call information. DSH may store image attachment copies. Supervisor chat history stores image attachment references; clearing the chat removes those references but does not delete DSH's attachment cache. Supervisor chat and instructions are stored per session under `DSH_HOME/think-guard/memory` (default `~/.dsh/think-guard/memory`) and may contain sensitive data. Do not include that directory in a repository or release. Clearing displayed records does not undo actions already performed.
 
 ## License
 
