@@ -1,7 +1,7 @@
 {
   "name": "dsh-think-guard",
   "version": "0.2.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs"
@@ -42,5 +42,18 @@
   },
   "engines": {
     "node": ">=20.19.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stars-ETO/dsh-think-guard.git"
+  },
+  "homepage": "https://github.com/Stars-ETO/dsh-think-guard#readme",
+  "bugs": {
+    "url": "https://github.com/Stars-ETO/dsh-think-guard/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-supervision"
+  ]
 }
